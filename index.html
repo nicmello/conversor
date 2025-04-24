@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Money Swap</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Money Swap</h1>
+      <div class="converter">
+        <p>Conversor de Moeda</p>
+
+        <div class="input-group">
+          <select id="fromCurrency">
+            <option value="USD">USD</option>
+            <option value="EUR">EUR</option>
+            <option value="BRL">BRL</option>
+            <option value="ARS">ARS</option>
+            <option value="GBP">GBP</option>
+            <option value="JPY">JPY</option>
+          </select>
+          <span>→</span>
+          <select id="toCurrency">
+            <option value="BRL">BRL</option>
+            <option value="USD">USD</option>
+            <option value="EUR">EUR</option>
+            <option value="ARS">ARS</option>
+            <option value="GBP">GBP</option>
+            <option value="JPY">JPY</option>
+          </select>
+        </div>
+
+        <input
+          type="text"
+          id="amount"
+          placeholder="Valor"
+          oninput="this.value = this.value.replace(/[^0-9.,]/g, '')"
+        />
+
+        <button onclick="converterMoeda()">Converter</button>
+        <p class="resultado" id="resultadoTexto"></p>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
